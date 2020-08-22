@@ -347,7 +347,7 @@ var lowLag = window.lowLag;
 
         var editmode = false;
 
-        textmode.on("mouseup touchend", function () {
+        textmode.on("click tap", function () {
           if (!editmode) {
             editmode = !editmode;
             components.forEach(function (x) {
@@ -383,7 +383,9 @@ var lowLag = window.lowLag;
             layer.draw();
           }
         });
-        textmode.on("dblclick dbltap", openFullscreen)
+        textmode.on("dblclick dbltap", function(){
+              openFullscreen()
+        })
 
         function playMode() {
           components.forEach(function (x) {
