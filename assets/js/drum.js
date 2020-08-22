@@ -383,6 +383,7 @@ var lowLag = window.lowLag;
             layer.draw();
           }
         });
+        textmode.on("dblclick dbltap", openFullscreen)
 
         function playMode() {
           components.forEach(function (x) {
