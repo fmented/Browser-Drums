@@ -47,7 +47,7 @@ var filesToCache = [
   './assets/swf/soundmanager2_debug.swf',
   './assets/swf/soundmanager2_flash9.swf',
   './assets/swf/soundmanager2_flash9_debug.swf',
-  './assets/swf/soundmanager2_flash_xdomain.swf',
+  './assets/swf/soundmanager2_flash_xdomain.zip',
   './assets/js/drum.js',
   './assets/js/lowLag.js',
   './assets/js/soundmanager2-jsmin.js',
