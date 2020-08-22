@@ -48,7 +48,7 @@
  "serviceworker": {
     "src": "./serviceworker.js",
     "scope": "./",
-    "type": "",
+    "type": ""
     
   }
 }
