@@ -1,4 +1,4 @@
-var staticCacheName = "django-pwa-v" + new Date().getTime();
+var staticCacheName = "drum-pwa-v" + new Date().getTime();
 var filesToCache = [
     '/assets/icon/android-icon-144x144.png',
   '/assets/icon/android-icon-192x192.png',
