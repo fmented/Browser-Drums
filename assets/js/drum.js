@@ -512,3 +512,16 @@ var lowLag = window.lowLag;
 
         loadCanvas(sources, buildStage);
       });
+
+      window.addEventListener("orientationchange", function () {
+        stage.destroy();
+        pageInit();
+        stage = new Konva.Stage({
+          container: "container",
+          rotation: rotation,
+          width: swidth,
+          height: sheight,
+        });
+
+        loadCanvas(sources, buildStage);
+      });
