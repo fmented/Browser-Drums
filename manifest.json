@@ -49,6 +49,6 @@
     "src": "./serviceworker.js",
     "scope": "./",
     "type": "",
-    "update_via_cache": "none"
+    
   }
 }
