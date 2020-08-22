@@ -47,7 +47,7 @@
  ],
  "serviceworker": {
     "src": "./serviceworker.js",
-    "scope": "/",
+    "scope": "./",
     "type": "",
     "update_via_cache": "none"
   }
