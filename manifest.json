@@ -31,12 +31,6 @@
    "sizes": "96x96",
    "type": "image/png",
    "density": "2.0"
-  },
-  {
-   "src": "assets/icon/addroid-icon-192x192.png",
-   "sizes": "192x192",
-   "type": "image/png",
-   "density": "4.0"
   }
  ],
  "serviceworker": {
