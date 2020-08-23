@@ -1,0 +1,5 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "io.github.fmented.twa",
+                   "sha256_cert_fingerprints": ["8A:CD:07:1C:44:2E:1A:72:0D:A6:06:0B:FE:F3:25:7B:FF:5E:6B:FE:DE:E6:4C:0F:6C:A3:70:D0:32:22:42:55"] }
+    }]
