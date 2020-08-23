@@ -384,6 +384,8 @@ var lowLag = window.lowLag;
         textmode.on("click tap", function () {
           if (!editmode) {
             editmode = !editmode;
+            this.text("mode : edit");
+            layer.draw();
             components.forEach(function (x) {
               x.draggable(true);
             });
@@ -400,21 +402,17 @@ var lowLag = window.lowLag;
                 layer.draw();
               });
             });
-            this.text("");
-            layer.draw();
-            this.text("mode : edit");
-            layer.draw();
-          } else {
+            
+          } 
+          else {
             editmode = !editmode;
+            this.text("mode : play");
+            layer.draw();
             components.forEach(function (x) {
               x.off("click tap dblclick dbltap");
               x.draggable(false);
             });
             playMode();
-            this.text("");
-            layer.draw();
-            this.text("mode : play");
-            layer.draw();
           }
         });
         textmode.on("dblclick dbltap", function(){
