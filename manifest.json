@@ -22,6 +22,24 @@
             "type": "image/png"
         }
  ],
+ "screenshots":[
+      {
+        "src": "./assets/image/shot1.png",
+        "sizes": "1334x750",
+        "type": "image/png"
+      },
+      {
+        "src": "./assets/image/shot2.png",
+        "sizes": "1334x750",
+        "type": "image/png"
+      },
+      { 
+        "src": "./assets/image/shot3.png",
+        "sizes": "1334x750",
+        "type": "image/png"
+      }
+
+ ],
  "serviceworker": {
     "src": "./serviceworker.js",
     "scope": "./",
