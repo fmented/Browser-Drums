@@ -1,9 +1,9 @@
 {
  "name": "Browser Drums",
- "short_name": "F Drums",
+ "short_name": "Simple Drums",
   "start_url": "./",
   "display": "fullscreen",
-  "background_color": "#fff",
+  "background_color": "transparent",
   "theme_color": "#303038",
   "description": "A Simple Browser-based Drum App.",
   "orientation": "landscape",
