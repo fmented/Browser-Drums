@@ -5,10 +5,10 @@ var lowLag = window.lowLag;
       var swidth;
       var ratio;
       var rotation;
-      var big;
-      var medium;
-      var small;
-      var xbig;
+      var big, big2;
+      var medium, medium2;
+      var small, small2;
+      var xbig, xbig2;
       var pos;
 
 
@@ -59,7 +59,7 @@ var lowLag = window.lowLag;
       };
 
       function pageInit() {
-        var a = screen.orientation.type;
+        var a = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
         if (!a.includes("landscape")) {
           rotation = 90;
           sheight = window.innerHeight;
@@ -126,12 +126,14 @@ var lowLag = window.lowLag;
 
           sheight = window.innerHeight;
           swidth = window.innerWidth;
-          ratio = swidth / sheight;
+          ratio = sheight / swidth ;
 
           big = (sheight * 45) / 100;
           medium = (sheight * 38) / 100;
           small = (sheight * 30) / 100;
           xbig = (sheight * 52) / 100;
+
+          
 
           pos = {
             crash1: {
