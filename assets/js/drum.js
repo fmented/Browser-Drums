@@ -5,11 +5,18 @@ var lowLag = window.lowLag;
       var swidth;
       var ratio;
       var rotation;
-      var big, big2;
-      var medium, medium2;
-      var small, small2;
-      var xbig, xbig2;
+      var big;
+      var medium;
+      var small;
+      var xbig;
       var pos;
+      var midisupport;
+
+      if (navigator.requestMIDIAccess) {
+        midisupport = true
+    } else {
+      midisupport = true
+    }
 
 
 
@@ -57,6 +64,20 @@ var lowLag = window.lowLag;
         kick: [86],
         kick2: [66, 78],
       };
+
+      note = {
+        crash1: 69,
+        crash2: 72,
+        ride: 74,
+        openhat: 46,
+        closehat: 44,
+        snare: 52,
+        tom1: 53,
+        tom2: 55,
+        floor: 57,
+        kick: 48,
+        kick2: 50,
+      }
 
       function pageInit() {
         var a = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
@@ -217,6 +238,7 @@ var lowLag = window.lowLag;
           width: xbig,
           height: xbig,
           keyBind: key.crash1,
+          note: note.crash1
         });
 
         var crash2 = new Konva.Image({
@@ -227,6 +249,7 @@ var lowLag = window.lowLag;
           width: big,
           height: big,
           keyBind: key.crash2,
+          note: note.crash2
         });
 
         var ride = new Konva.Image({
@@ -238,6 +261,7 @@ var lowLag = window.lowLag;
           width: xbig,
           height: xbig,
           keyBind: key.ride,
+          note: note.ride
         });
 
         var openhat = new Konva.Image({
@@ -248,6 +272,7 @@ var lowLag = window.lowLag;
           width: medium,
           height: medium,
           keyBind: key.openhat,
+          note: note.openhat
         });
 
         var closehat = new Konva.Image({
@@ -258,6 +283,7 @@ var lowLag = window.lowLag;
           width: medium,
           height: medium,
           keyBind: key.closehat,
+          note: note.closehat
         });
 
         var snare = new Konva.Image({
@@ -268,6 +294,7 @@ var lowLag = window.lowLag;
           width: xbig,
           height: xbig,
           keyBind: key.snare,
+          note: note.snare
         });
 
         var tom1 = new Konva.Image({
@@ -279,6 +306,7 @@ var lowLag = window.lowLag;
           width: medium,
           height: medium,
           keyBind: key.tom1,
+          note: note.tom1
         });
 
         var tom2 = new Konva.Image({
@@ -290,6 +318,7 @@ var lowLag = window.lowLag;
           width: big,
           height: big,
           keyBind: key.tom2,
+          note: note.tom2
         });
 
         var floor = new Konva.Image({
@@ -301,6 +330,7 @@ var lowLag = window.lowLag;
           width: xbig,
           height: xbig,
           keyBind: key.floor,
+          note: note.floor
         });
 
         var kick = new Konva.Image({
@@ -311,6 +341,7 @@ var lowLag = window.lowLag;
           width: xbig,
           height: xbig,
           keyBind: key.kick,
+          note: note.kick
         });
 
         var kick2 = new Konva.Image({
@@ -321,6 +352,7 @@ var lowLag = window.lowLag;
           width: xbig,
           height: xbig,
           keyBind: key.kick2,
+          note: note.kick2
         });
 
         var textmode = new Konva.Text({
@@ -478,6 +510,60 @@ var lowLag = window.lowLag;
           }
         }
       });
+
+      if (midisupport){
+        navigator.requestMIDIAccess()
+      .then(onMIDISuccess);
+    }
+
+    function onMIDISuccess(midiAccess) {
+    for (var input of midiAccess.inputs.values()){
+        input.onmidimessage = getMIDIMessage;
+    }
+}
+
+    function getMIDIMessage(midiMessage) {
+      var n = midiMessage.data[1]
+      var mtype = midiMessage.data[0]
+        if (mtype>=144 && mtype<=159){
+          try {
+            stage.children[0].children.forEach(function(x){
+              if (x.attrs.note == n){
+                x.fire('touchstart')
+              }
+            })
+            
+          } catch (error) {
+            if (error.name == TypeError){
+              stage.children[0].children.forEach(function(x){
+                if (x.attrs.note == n){
+                  x.fire('touchstart')
+                }
+              })
+            }
+            
+          }
+        }
+        else if (mtype>=128 && mtype<=143){
+          try {
+            stage.children[0].children.forEach(function(x){
+              if (x.attrs.note == n){
+                x.fire('touchend')
+              }
+            })
+            
+          } catch (error) {
+            if (error.name == TypeError){
+              stage.children[0].children.forEach(function(x){
+                if (x.attrs.note == n){
+                  x.fire('touchend')
+                }
+              })
+            }
+            
+          }
+        }
+    }
 
       var layer = new Konva.Layer({});
 
