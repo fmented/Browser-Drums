@@ -138,7 +138,7 @@ var lowLag = window.lowLag;
               y: (swidth * (55 + -100)) / 100 + ratio,
             },
             textmode: {
-              x: (sheight * 88) / 100 + ratio,
+              x: (sheight * 80) / 100 + ratio,
               y: (swidth * (93 + -100)) / 100 + ratio,
             },
           };
@@ -202,7 +202,7 @@ var lowLag = window.lowLag;
               y: (sheight * 55) / 100 + ratio,
             },
             textmode: {
-              x: (swidth * 88) / 100 + ratio,
+              x: (swidth * 80) / 100 + ratio,
               y: (sheight * 93) / 100 + ratio,
             },
           };
@@ -358,10 +358,12 @@ var lowLag = window.lowLag;
         var textmode = new Konva.Text({
           x: pos.textmode.x,
           y: pos.textmode.y,
-          fontFamily: "Calibri",
-          fontSize: 20,
+          fontFamily: "Arial",
+          fontSize: swidth*3.2/100,
           text: "mode : play",
           fill: "white",
+          align:"center",
+          fontStyle: "bold"
 
         });
 
