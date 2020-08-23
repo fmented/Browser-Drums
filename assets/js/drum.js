@@ -516,14 +516,19 @@ var lowLag = window.lowLag;
       });
 
       window.addEventListener("orientationchange", function () {
-        stage.destroy();
-        pageInit();
-        stage = new Konva.Stage({
-          container: "container",
-          rotation: rotation,
-          width: swidth,
-          height: sheight,
-        });
+        var o = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+        if (o.includes('landscape')){
+          stage.destroy();
+          pageInit();
+          stage = new Konva.Stage({
+            container: "container",
+            rotation: rotation,
+            width: swidth,
+            height: sheight,
+          });
 
-        loadCanvas(sources, buildStage);
+          loadCanvas(sources, buildStage);
+        }
+        
+
       });
