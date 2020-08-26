@@ -1,10 +1,5 @@
 [{
       "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "io.github.fmented.twa",
-        "sha256_cert_fingerprints": [
-          "31:30:FB:1D:28:58:51:63:0B:20:54:46:60:D6:5D:C8:A1:87:4F:3C:25:D7:4F:A9:AC:81:E5:54:63:CD:72:9B"
-        ]
-      }
+      "target" : { "namespace": "android_app", "package_name": "io.github.fmented.twa",
+                   "sha256_cert_fingerprints": ["31:30:FB:1D:28:58:51:63:0B:20:54:46:60:D6:5D:C8:A1:87:4F:3C:25:D7:4F:A9:AC:81:E5:54:63:CD:72:9B"] }
     }]
