@@ -66,17 +66,17 @@ var lowLag = window.lowLag;
       };
 
       note = {
-        crash1: 69,
-        crash2: 72,
-        ride: 74,
+        crash1: 49,
+        crash2: 57,
+        ride: 51,
         openhat: 46,
-        closehat: 44,
-        snare: 52,
-        tom1: 53,
-        tom2: 55,
-        floor: 57,
-        kick: 48,
-        kick2: 50,
+        closehat: 42,
+        snare: 38,
+        tom1: 50,
+        tom2: 47,
+        floor: 48,
+        kick: 35,
+        kick2: 36,
       }
 
       function pageInit() {
