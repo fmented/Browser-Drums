@@ -8,31 +8,32 @@ Support touch, mouse, keyboard, and MIDI input.
 
 <br>
 
-**Keyboard Map**
-|  name         |  key  | alt-key   |
-|---            |---    |---        |
-| kick1         | v     |           |
-| kick2         | b     | n         | 
-| snare         | g     | h         |   
-| open hihat    | a     | s         |   
-| closed hihat  | z     | x         |   
-| high tom      | d     | f         |   
-| low tom       | k     | l         |   
-| floor tom     | ,     | .         |   
-| crash 1       | w     | e         |   
-| crash 2       | t     | y         |   
-| ride          | i     | o         |  
+**Keyboard Map** ⌨
+|  name         |  key              | alt-key   |
+|---            |---                |---        |
+| kick1         | <kbd>V</kbd>      |           |
+| kick2         | <kbd>B</kbd>      |<kbd>N</kbd>| 
+| snare         | <kbd>G</kbd>      |<kbd>H</kbd>|   
+| open hihat    | <kbd>A</kbd>      |<kbd>S</kbd>|   
+| closed hihat  |<kbd>Z</kbd>       |<kbd>X</kbd>|   
+| high tom      | <kbd>D</kbd>      |<kbd>F</kbd>|   
+| low tom       |<kbd>K</kbd>       |<kbd>L</kbd>|   
+| floor tom     |<kbd>,</kbd>       |<kbd>.</kbd>|   
+| crash 1       |<kbd>W</kbd>       |<kbd>E</kbd>|   
+| crash 2       |<kbd>T</kbd>       |<kbd>Y</kbd>|   
+| ride          |<kbd>I</kbd>       |<kbd>O</kbd>|  
 <br>
 
-**MIDI Map**
+**MIDI Map** 🎹
 
-Compatible with [GM standard](https://musescore.org/sites/musescore.org/files/General%20MIDI%20Standard%20Percussion%20Set%20Key%20Map.pdf)
+Compatible with [GM standard](https://musescore.org/sites/musescore.org/files/General%20MIDI%20Standard%20Percussion%20Set%20Key%20Map.pdf) 
 
 <br>
 
-**Other Feature:**
+**Other Feature:** ✨
 - click on mode text will allow the player to rearrange the placement of the kit
 - double click on mode text will trigger fullscreen mode (Enter key)
+- installable Progresive Web App
 
 <br>
 
@@ -54,5 +55,5 @@ Compatible with [GM standard](https://musescore.org/sites/musescore.org/files/Ge
 
 ***also checkout [Chordizzzy](https://fmented.github.io/chordizzzy/) to learn more about chord names***
 
-*Both tested with Google Chrome only*
+*Both tested and work best with Google Chrome only*
 
